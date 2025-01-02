@@ -1,7 +1,7 @@
 {
     "name": "MLR Ecommerce Crypto Base",
     "summary": "MLR Ecommerce Crypto Base",
-    "author": "ERP",
+    "author": "MLR - MI Lightning Rod",
     "website": "https://www.milightningrod.com",
     "category": "Ecommerce",
     "version": "1.0",
