@@ -1,10 +1,10 @@
 {
     "name": "MLR Ecommerce Crypto Base",
     "summary": "MLR Ecommerce Crypto Base",
-    "author": "ERP",
+    "author": "MLR - MI Lightning Rod",
     "website": "https://www.milightningrod.com",
     "category": "Ecommerce",
-    "version": "1.0",
+    "version": "16.0",
     "depends": ["website", "website_sale"],
     "data": [
         "views/crypto_payment_provider.xml",
@@ -14,5 +14,5 @@
     "installable": True,
     "application": False,
     "auto_install": False,
-    "license": "OPL-1",
+    "license": "LGPL-3",
 }
