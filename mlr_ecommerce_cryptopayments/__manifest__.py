@@ -6,6 +6,7 @@
     "category": "Ecommerce",
     "version": "17.0",
     "depends": ["website", "website_sale"],
+    'images': ['static/description/icon.png'],
     "data": [
         "views/crypto_payment_provider.xml",
         "views/crypto_payment_form.xml",
