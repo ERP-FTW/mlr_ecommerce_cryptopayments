@@ -1,24 +1,24 @@
 <odoo>
     <data>
-        <record id="view_pos_payment_form_cryptopay" model="ir.ui.view">
-            <field name="name">pos.payment.form.view.inherit</field>
-            <field name="model">pos.payment</field>
-            <field name="inherit_id" ref="point_of_sale.view_pos_payment_form"/>
+        <record id="provider_form_crypto" model="ir.ui.view">
+            <field name="name">provider.form.crypto</field>
+            <field name="model">payment.provider</field>
+            <field name="inherit_id" ref="payment.payment_provider_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='session_id']" position="after">
-                    <field name="is_crypto_payment"/>
-                </xpath>
-                <xpath expr="//field[@name='payment_method_id']" position="after">
-                    <group name="cryptopay_group" invisible="is_crypto_payment = False">
-                        <field name="cryptopay_payment_type"/>
-                        <field name="cryptopay_invoice_id"/>
-                        <field name="conversion_rate"/>
-                        <field name="invoiced_crypto_amount"/>
-                        <field name="cryptopay_payment_link"/>
-                        <field name="currency_id"/>
+                <group name="provider_credentials" position="inside">
+                    <group>
+                        <field name="code"/>
+                        <field name="is_crypto_provider"/>
                     </group>
-                </xpath>
-            </field>
+                         <!-- Hide the group if is_crypto_provider is not checked -->
+                    <group name="crypto_credentials" invisible="is_crypto_provider != True">
+                        <field name="crypto_server_url"/>
+                        <field name="crypto_api_key" password="True"/>
+                        <field name="crypto_min_amount"/>
+                        <field name="crypto_max_amount"/>
+                    </group>
+                </group>
+             </field>
         </record>
     </data>
 </odoo>
