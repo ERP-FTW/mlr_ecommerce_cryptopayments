@@ -9,7 +9,7 @@
                     <field name="is_crypto_payment"/>
                 </xpath>
                 <xpath expr="//field[@name='payment_method_id']" position="after">
-                    <group name="cryptopay_group" invisible="not is_crypto_payment">
+                    <group name="cryptopay_group" invisible="is_crypto_payment = False">
                         <field name="cryptopay_payment_type"/>
                         <field name="cryptopay_invoice_id"/>
                         <field name="conversion_rate"/>
